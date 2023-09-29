@@ -1,0 +1,173 @@
+///1.iterate Json data using for,for each,for of,for in loops
+var cakes=[
+	{
+		"id": "0001",
+		"type": "donut",
+		"name": "Cake",
+		"ppu": 0.55,
+		"batters":
+			{
+				"batter":
+					[
+						{ "id": "1001", "type": "Regular" },
+						{ "id": "1002", "type": "Chocolate" },
+						{ "id": "1003", "type": "Blueberry" },
+						{ "id": "1004", "type": "Devil's Food" }
+					]
+			},
+		"topping":
+			[
+				{ "id": "5001", "type": "None" },
+				{ "id": "5002", "type": "Glazed" },
+				{ "id": "5005", "type": "Sugar" },
+				{ "id": "5007", "type": "Powdered Sugar" },
+				{ "id": "5006", "type": "Chocolate with Sprinkles" },
+				{ "id": "5003", "type": "Chocolate" },
+				{ "id": "5004", "type": "Maple" }
+			]
+	},
+	{
+		"id": "0002",
+		"type": "donut",
+		"name": "Raised",
+		"ppu": 0.55,
+		"batters":
+			{
+				"batter":
+					[
+						{ "id": "1001", "type": "Regular" }
+					]
+			},
+		"topping":
+			[
+				{ "id": "5001", "type": "None" },
+				{ "id": "5002", "type": "Glazed" },
+				{ "id": "5005", "type": "Sugar" },
+				{ "id": "5003", "type": "Chocolate" },
+				{ "id": "5004", "type": "Maple" }
+			]
+	},
+	{
+		"id": "0003",
+		"type": "donut",
+		"name": "Old Fashioned",
+		"ppu": 0.55,
+		"batters":
+			{
+				"batter":
+					[
+						{ "id": "1001", "type": "Regular" },
+						{ "id": "1002", "type": "Chocolate" }
+					]
+			},
+		"topping":
+			[
+				{ "id": "5001", "type": "None" },
+				{ "id": "5002", "type": "Glazed" },
+				{ "id": "5003", "type": "Chocolate" },
+				{ "id": "5004", "type": "Maple" }
+			]
+	}
+]
+for(var i in cakes){
+    console.log(i,cakes[i]);
+}
+
+for(var i = 0; i<cakes.length; i++){
+    console.log(cakes[i]);
+  }
+
+
+
+  for(var newnum of cakes){
+    console.log(newnum);
+  }
+  
+cakes.forEach(element => {
+  console.log(element)
+});
+
+
+//2.create your own resume for JSON format
+var resume = {
+  "name": "MUTHU GOWRI K",
+  "designation": "Associate Engineer",
+  "email": "kmuthugowri@gmail.com",
+  "phone":"+91-8056496565",
+  "SUMMARY": ["To Ensure a challenging position in a growing organization where I would be able to utilize my capabilities to the best extent and in the process add value to organization and my career."],
+  "LOCATION": {
+    "address": "No.1,Andapuram road,kattuputhur post,thottiym taluk",
+    "postalCode": "621207",
+    "District":"Tirchy",
+    "State":"Tamilnadu",
+   
+  },
+"EDUCATION": {
+  "institution": "Anna University",
+  "college":"Paavai Engineering college,Namakkal",
+  "Degree": "M.E",
+  "Duration": "2013-2015",
+  "cgpa": "8.",
+  
+},
+"CERTIFICATES": {
+  "programming": "Diplomo in computer programming",
+},
+"SKILLS": "Zoho Products (Zoho Creator,Zoho CRM),Deluge Script",
+"LANGUAGES": {
+  "language": "Tamil , English",
+},
+"INTEREST": {
+  "baking": "pastries",
+  "embroidery": 
+    "free hand",
+  
+},
+"REFERENCE": {
+  "name": "Gowri",
+  "reference": "Subash",
+  "phone":"+91-9994403193",
+},
+};
+console.log(resume);
+
+
+3.Differences between window,screen and document:
+
+In JavaScript, window, document, and screen are distinct objects that represent different aspects of a web browser and its environment.
+
+Window Object
+The Window object represents the browser window. It is the topmost object in the browser's window hierarchy. It is supported by all browsers.It is the outermost object in the browser. It is the parent of all other objects in the browser. Everything in the browser is a child of a window object
+All global JavaScript objects, functions, and variables automatically become members of the window object.
+
+Even the document object (of the HTML DOM) is a property of the window object
+
+The browser window (the browser viewport) is NOT including toolbars and scrollbars
+
+It serves as the global object in client-side JavaScript. It encapsulates the entire browser window, including tabs, frames, and iframes. The window object provides access to various properties and methods related to the browser environment, such as opening new windows, resizing, scrolling, and interacting with the browser's history.
+
+Document Object
+It is an object that provides access to all HTML elements of a document. When an HTML document is loaded into a browser window, then it the document object stores the elements of an HTML document, such as HTML, HEAD, BODY, and becomes a document object. other HTML tags as objects.
+
+A document object is a child object of the Window object, which refers to the browser.
+The Document Object also allows you to create cookies for a webpage by providing a property named cookie. A cookie stores information about the user's computer, which helps in accessing visited websites
+The Document Object provides different collection elements, such as anchor and Links which helps you to count the number of specific elements on a form.
+The document object represents the current web page displayed in the browser window. It provides access to the HTML content of the page and allows you to manipulate the structure, content, and styling using the Document Object Model (DOM). Through the document object, you can access elements, modify their attributes and content, and respond to user interactions.
+
+Screen Object
+JavaScript Screen is a built-in Interface (object type) that is used to fetch information related to the browser screen on which the current window is rendered.
+window object is at the top of the scope chain, the property window. screen gives the Screen object, but the screen object can be accessed.
+without specifying the window too, in that case JavaScript automatically detects the browser window, which is created by JavaScript Runtime Engine.
+
+The screen object represents the user's screen dimensions and display properties. It provides information about the user's monitor, such as screen width, height, color depth, and pixel density. The screen object is useful for creating responsive designs and adapting content to different screen sizes.
+
+Window VS. Document VS. Screen
+
+The window object represents the browser window itself and provides methods for interacting with the browser's environment.
+The document object represents the current web page's content and structure, allowing manipulation using the DOM.
+The screen object provides information about the user's screen dimensions and display properties.
+
+Conclusion
+The window object encompasses the entire browser window, the document object represents the web page content, and the screen object offers information about the user's screen dimensions. These objects serve different purposes in JavaScript and are crucial for web development tasks and user experience optimization.
+
+
